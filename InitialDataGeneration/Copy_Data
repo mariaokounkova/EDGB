@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Copying data from wheeler
+ORIGIN_DIR=mokounko@wheeler.caltech.edu:/home/mokounko/dCS/Tests/BlackBoxTests/LinearEinsteinCurvedExamples/GenerateMathematicaDomainID/Save
+DATA_DIR=/Users/mokounkova/EDGB/InitialDataGeneration/Domains
+
+rsync -R ${ORIGIN_DIR}/Domain*/Vars* $DATA_DIR
+
+mv ${DATA_DIR}/home/mokounko/dCS/Tests/BlackBoxTests/LinearEinsteinCurvedExamples/GenerateMathematicaDomainID/Save/* $DATA_DIR
+rm -r ${DATA_DIR}/home
+
+
