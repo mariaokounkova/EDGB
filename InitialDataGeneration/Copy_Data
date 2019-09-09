@@ -4,9 +4,16 @@
 ORIGIN_DIR=mokounko@wheeler.caltech.edu:/home/mokounko/dCS/Tests/BlackBoxTests/LinearEinsteinCurvedExamples/GenerateMathematicaDomainID/Save
 DATA_DIR=/Users/mokounkova/EDGB/InitialDataGeneration/Domains
 
+rm -r Domains/Domain*
+
 rsync -R ${ORIGIN_DIR}/Domain*/Vars* $DATA_DIR
+rsync -R ${ORIGIN_DIR}/Domain*/Domain.input $DATA_DIR
 
 mv ${DATA_DIR}/home/mokounko/dCS/Tests/BlackBoxTests/LinearEinsteinCurvedExamples/GenerateMathematicaDomainID/Save/* $DATA_DIR
 rm -r ${DATA_DIR}/home
 
-
+## Make a directory for each spin
+for i in Domains/Domain*; do
+        spin=$(echo $i | cut -c15-20)
+        mkdir ScalarField/Theta${spin}
+done
