@@ -16,4 +16,5 @@ rm -r ${DATA_DIR}/home
 for i in Domains/Domain*; do
         spin=$(echo $i | cut -c15-20)
         mkdir ScalarField/Theta${spin}
+        cp ${i}/Domain.input ScalarField/Theta${spin}
 done
