@@ -2,5 +2,6 @@ InitialDataGeneration/Domains
 InitialDataGeneration/ScalarField
 */.ipynb_checkpoints/
 InitialDataGeneration/Constraints
+Evolution/Runs*
 *.pdf
 
