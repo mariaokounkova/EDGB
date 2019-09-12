@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## Copying data from wheeler
+ORIGIN_DIR=mokounko@wheeler.caltech.edu:/home/mokounko/Data/EDGBEvolution
+DATA_DIR=/Users/mokounkova/EDGB/Evolution/Runs_100
+
+rsync -r ${ORIGIN_DIR}/Joined* $DATA_DIR
+
