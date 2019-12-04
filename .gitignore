@@ -3,5 +3,6 @@ InitialDataGeneration/ScalarField
 */.ipynb_checkpoints/
 InitialDataGeneration/Constraints
 Evolution/Runs*
+Evolution/LargeID
 *.pdf
 

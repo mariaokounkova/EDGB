@@ -4,11 +4,15 @@
 ORIGIN_DIR=mokounko@wheeler.caltech.edu:/home/mokounko/Data/EDGBGW150914
 DATA_DIR=/Users/mokounkova/EDGB_Data
 EXTRAP_DIR="BBH_SKS_d13_q1.22_sA_0_0_0.330_sB_0_0_-0.440"
-RUN_DIR=*
+RUN_DIR=1900_250
 
+echo "Copying scalar field waveforms..."
 rsync -R ${ORIGIN_DIR}/${RUN_DIR}/Ev/JoinedLev*/* $DATA_DIR
+echo "Copying Delta Psi4 finite radius..."
 rsync -R ${ORIGIN_DIR}/${RUN_DIR}/Ev/JoinedLev*/GW2/rDelta* $DATA_DIR
+#echo "Copying extrapolated Delta Psi4..."
 #rsync -R ${ORIGIN_DIR}/${RUN_DIR}/${EXTRAP_DIR}/Lev*/*Delta* $DATA_DIR
+
 
 mv ${DATA_DIR}/home/mokounko/Data/EDGBGW150914/* $DATA_DIR
 rm -r ${DATA_DIR}/home
